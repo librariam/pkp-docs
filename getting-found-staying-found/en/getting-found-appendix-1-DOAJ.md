@@ -88,9 +88,10 @@ If you are looking for further explanation on what the questions mean, please re
 * Enter this information at Journal Settings > Contact > Mailing Address. A full mailing address is preferred. See [Chapter 5: Journal Settings](https://docs.pkp.sfu.ca/learning-ojs/en/journal-setup#contact).
 * The country will appear on the Contact page of your site.
 
-**13) Does the journal have article processing charges (APCs)?**
+**13) Does the journal have article processing charges (APCs)?** \[**D**\]
 
 * Select "Yes" or "No".
+* Selecting "Yes" will not exclude you from consideration for DOAJ.
 * Enter this information in two places:
   * Settings > Website> Information > For Authors. See [Chapter 6: Website Settings](https://docs.pkp.sfu.ca/learning-ojs/en/settings-website#information).
   * Settings > Workflow > Submission > Submission Preparation Checklist. See [Chapter 7: Workflow Settings](https://docs.pkp.sfu.ca/learning-ojs/en/settings-workflow#submission).
@@ -101,9 +102,10 @@ If you are looking for further explanation on what the questions mean, please re
 
 **15/16) If you answered "Yes" to question 13, enter the amount and currency.**
 
-**17) Does the journal have article submission charges?**
+**17) Does the journal have article submission charges?** \[**D**\]
 
 * Select "Yes" or "No".
+* Selecting "Yes" will not exclude you from consideration for DOAJ.
 * Enter this information in two places:
   * Settings > Website> Information > For Authors. See [Chapter 6: Website Setting](https://docs.pkp.sfu.ca/learning-ojs/en/settings-website#information).
   * Settings > Workflow > Submission > Submission Preparation Checklist. See [Chapter 7: Workflow Settings](https://docs.pkp.sfu.ca/learning-ojs/en/settings-workflow#submission).
@@ -122,7 +124,7 @@ If you are looking for further explanation on what the questions mean, please re
 
 * Published articles appear on your site on the Archives page.
 
-**23) Does the journal have a waiver policy (for developing country authors etc)?**
+**23) Does the journal have a waiver policy (for developing country authors etc)?** \[**D**\]
 
 * Select "Yes" or "No". Answer "No" if you have also answered No to #13 and #17.
 * Settings > Website> Information > For Authors. See See [Chapter 6: Website Setting](https://docs.pkp.sfu.ca/learning-ojs/en/settings-website#information).
@@ -153,7 +155,7 @@ If you are looking for further explanation on what the questions mean, please re
 * This field is optional if you selected "No policy in place."
 * If you are archiving your content in a LOCKSS network, this will not automatically be displayed on your OJS site. You can add your archiving policy to the About page or another page and link to it here. 
 
-**27) Does the journal allow software/spiders to automatically crawl the journal content (also known as text mining)?**
+**27) Does the journal allow software/spiders to automatically crawl the journal content (also known as text mining)?** \[**D**\]
 
 * Answer "yes" unless you have configured your site to not be found (which is very unusual).
 
