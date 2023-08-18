@@ -1,19 +1,25 @@
 ---
 book: learning-ojs
-version: 3.3
+version: 3.4
+showPageTOC: true
+title: Learning Open Journal Systems 3.4 - Users and Roles
 ---
 
 # Users and Roles
 
-This section provides access to all of the user accounts associated with your journal, as well as the opportunity to manage roles and permissions.
+This section provides information on accessing all of user accounts associated with your journal, as well as managing roles and permissions.
 
 ## Managing Users
+
+This PKP School video explains how to manage users in OJS. To watch other videos in this series, visit [PKP’s YouTube channel](https://www.youtube.com/playlist?list=PLg358gdRUrDVTXpuGXiMgETgnIouWoWaY).
+
+{% include video.html id="_AAtxnFEodQ" provider="youtube" title="Video of how to manage users in OJS"%}
 
 In addition to managing the journal web site, the Journal Manager is also responsible for all of the user accounts in the system.
 
 To view the user accounts, select Users & Roles from the left menu.
 
-![](./assets/learning-ojs3.1-jm-users.png)
+![Users and Roles screen with list of journal users](./assets/learning-ojs3.1-jm-users.png)
 
 If you want to export a list of all registered users, you can find the option to export it as an XML file under the **Tools** menu. If you prefer your user data in a spreadsheet format, you can download it as a CSV file from **Statistics > Users**.
 
@@ -23,7 +29,7 @@ Users are displayed in last name order.
 
 You can edit a user account by selecting the blue arrow to the left of an entry.
 
-![](./assets/learning-ojs3.1-jm-users-edit.png)
+![Blue arrow selected by a user's name with options to edit their account](./assets/learning-ojs3.1-jm-users-edit.png)
 
 This opens the options to Email, Edit User, Disable, Remove, Login As, Merge User.
 
@@ -38,7 +44,9 @@ To send an email to a user that is unrelated to a submission:
 3. Click the blue arrow next to the user’s name to reveal links below it
 4. Click Email. A pop-up box will appear where you can type in your message and send it
 
-![](./assets/learning-ojs-3-users-email.png)
+![Email pop-up box for emailing a user](./assets/learning-ojs-3-users-email.png)
+
+##### Bulk Email Notifications by Role
 
 In OJS 3.3 you can email multiple users at the same time using the Notify tab. This feature will need to be enabled for each journal by the journal administrator under Site Settings > Bulk Emails. The site administrator can also disable certain roles in the journal from receiving bulk emails under Hosted Journals > Settings Wizard.
 
@@ -46,7 +54,7 @@ If enabled for the journal by the site administrator, emails can be sent to all 
 
 In the Notify tab, select the user roles that you would like to email. Type your subject and email message. You have the option to send a copy of the email to your own email address. You will receive a status notification indicating that the message was sent successfully.
 
-![](./assets/learning-ojs3.3-users-roles-notify.png)
+![OJS 3.3 selecting multiple users to notify with an email message](./assets/learning-ojs3.3-users-roles-notify.png)
 
 This email feature can be used to send practical, core service emails to users who are actively working on the journal. For example, you might send an email to all copy editors reminding them of the “house style” for a particular word use or spelling. Avoid using this feature to notify large numbers of readers; the Announcement feature is preferable for large broadcast emails. See [Website Settings > Setup > Announcements](./settings-website#announcements) for details about this feature.
 
@@ -56,7 +64,7 @@ It is not possible to add cc or bcc addresses other than your own, or to add att
 
 **Edit User** allows you to make changes to that user's account.
 
-![](./assets/learning-ojs-3-users-edit-user.png)
+![Edit information about a user](./assets/learning-ojs-3-users-edit-user.png)
 
 **Disable** keeps the account in place, but blocks the user from accessing it.
 
@@ -86,31 +94,31 @@ To merge users:
 
 When you have a large number of users, you will want to take advantage of the search feature.
 
-![](./assets/learning-ojs-3-users-search.png)
+![Search for a journal user by name, email, and role](./assets/learning-ojs-3-users-search.png)
 
 This can help you quickly find a user by first name, last name, or email address, or to see all users in a particular role.
 
 **Note**: If you leave the Search field blank, select a Role, and hit Search, you will get a list of all users in that role (e.g., all copyeditors).
 
-![](./assets/learning-ojs-3-users-search-roles.png)
+![Search for all users with a given role](./assets/learning-ojs-3-users-search-roles.png)
 
 #### Add User
 
 To add a new user to your journal, select the Add User link. This will open a new window with a set of fields to fill in.
 
-![](./assets/learning-ojs-3-users-add-new.png)
+![Add a user and enter their information](./assets/learning-ojs-3-users-add-new.png)
 
 Once these fields are completed and you hit _Save_, you will then be asked to assign roles to the new account. Use the _Add Role_ link to open the role selector.
 
-![](./assets/learning-ojs-3-users-add-new-roles1.png)
+![Assign a role to a new user's account](./assets/learning-ojs-3-users-add-new-roles1.png)
 
 Once you have added all of the roles, hit the **Save** button.
 
 #### Register a User from Another Journal
 
-On multi-journal installations, an Administrator can register a user from Journal A as a user on Journal B.
+On multi-journal installations, an Administrator or Journal Manager can register a user from Journal A as a user on Journal B.
 
-1. Log in to Journal B as an Administrator
+1. Log in to Journal B as an Administrator or Journal Manager account
 2. Go to Users & Roles > Users
 3. Search for the user from Journal A that you want to register on Journal B, checking off **Include users with no roles in this journal**
 4. When the user appears, click the blue arrow next to their name
@@ -143,13 +151,18 @@ If the user still cannot log in, their account may have been disabled. To re-ena
 
 ## Permissions and Roles
 
+This PKP School video explains how to manage roles in OJS. To watch other videos in this series, visit [PKP’s YouTube channel](https://www.youtube.com/playlist?list=PLg358gdRUrDVTXpuGXiMgETgnIouWoWaY).
+
+{% include video.html id="3sqD41OKuFs" provider="youtube" title="Video of how to manage roles in OJS"%}
+
 The OJS workflow revolves around different roles with different permissions and responsibilities for each user, allowing them access to different parts of the workflow. Users in the system must have at least one role. Users can also have more than one role, for example, being a Journal Manager, Editor, and Author in the same journal.
 
 Each role is first assigned a permission level, which will broadly define what level of access a user has to a particular journal. Roles are then further customized by providing a position name, and granting or restricting access to various stages of the Editorial Workflow.
 
 There are a number of predefined roles that you can use and edit in OJS. Read in-depth about these predefined roles organized by their permissions level. Italicized roles are new in OJS 3.
  
-* The **Site Administrator** is a single user responsible for administration of the entire OJS installation. This permissions level will not appear in user lists or in role settings.
+* The **Site Administrator** is a single user responsible for administration of the entire OJS installation. This permissions level will not appear in user lists or in role settings. Site administrators, by default, have access to all journals within a given instance and can take any actions that can be undertaken by Journal Managers.
+
 * **Journal Managers** have access to the entire Editorial Workflow, as well as all other journal settings.
 Available predefined Journal Manager roles: Journal Manager, Journal Editor (formerly “Editor” in OJS 2), Production Manager
 * **Section Editors** have access to the entire Editorial Workflow, but cannot make any changes to journal settings.
@@ -166,7 +179,7 @@ Available predefined Assistant roles and their assigned editorial workflow stage
 
 Predefined and custom roles can be checked from the Roles tab.
 
-![](./assets/learning-ojs3.1-jm-users-roles.png)
+![Roles tab showing all current roles in the journal](./assets/learning-ojs3.1-jm-users-roles.png)
 
 From this page, you can see each role, and the editorial stage each role can access. A good example of this is the Copyeditor role, which can only access the copyediting stage. Copyeditors cannot jump to the Review stage to see what happened during the peer review process. See the Editorial Workflow chapter for more information about the different editorial stages.
 
@@ -178,7 +191,7 @@ Unchecking a box removes access to that stage for users with that role.
 
 Selecting the blue arrow to the left of the role name reveals the edit link. Clicking this opens the editing window.
 
-![](./assets/learning-ojs3.1-jm-users-roles-edit.png)
+![Edit details of a role](./assets/learning-ojs3.1-jm-users-roles-edit.png)
 
 **Permission Level**: This indicates how much a user with this role can do in any stage.
 
@@ -204,9 +217,13 @@ Use the _Create New Roles_ link to open a window where you can create a new role
 
 ## Site Access Options
 
+This PKP School video explains how to configure site options in OJS. To watch other videos in this series, visit [PKP’s YouTube channel](https://www.youtube.com/playlist?list=PLg358gdRUrDVTXpuGXiMgETgnIouWoWaY).
+
+{% include video.html id="lqf4GmA01PA" provider="youtube" title="Video of how to configure site access options in OJS"%}
+
 This page allows you to determine how readers can access your journal.
 
-![](./assets/learning-ojs3.1-jm-users-siteoptions.png)
+![Site access options tab under Users and Roles](./assets/learning-ojs3.1-jm-users-siteoptions.png)
 
 **Additional Site and Article Access Restrictions**: Choose from these options to limit access.
 

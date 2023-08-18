@@ -1,3 +1,8 @@
+---
+title: Getting Found, Staying Found - Increasing Impact
+showPageTOC: true
+---
+
 # Increasing Impact
 
 Another method of building professional recognition is through the use of different techniques for measuring the use and impact of your journal. This will provide clear evidence of the success of your journal and allow you to regularly evaluate your progress.
@@ -102,7 +107,7 @@ For example, citation count in Web of Science citation counts are limited to tho
 For the same example, Google Scholar returns a higher citation count because the index is more inclusive, and also represents non-journal citations.
 
 ![Web of Science formula](assets/chapter2/google-scholar-citation.png)
-*Screenshot of article result from Google Scholar*
+*An article result from Google Scholar*
 
 #### Article Influence score
 

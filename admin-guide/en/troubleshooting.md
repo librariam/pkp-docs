@@ -1,3 +1,10 @@
+---
+title: Troubleshooting - Admin Guide - PKP Developer Docs
+description: How to fix some common problems encountered when deploying OJS, OMP or OPS.
+book: admin-guide
+version: 3.4
+---
+
 # Troubleshooting
 
 ## Permissions, File Access, Etc.
@@ -97,8 +104,11 @@ The goal of fixing character encoding problems is to ensure that the data stored
 ### Introduction to Character Sets and Encodings
 
 The following articles provide a good introduction to character sets and encodings:
+
 * [Character Encodings: Essential Concepts](https://www.w3.org/International/articles/definitions-characters/)
 * [The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No Excuses!)](https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/)
+* [The Ultimate Guide To UTF-8 and MySQL](https://jonisalonen.com/2012/ultimate-guide-to-utf8-and-mysql)
+* [Breaking out from the MySQL character-set hell](https://manish-demblani.medium.com/breaking-out-from-the-mysql-character-set-hell-24c6a306e1e5)
 
 ### General Approach
 
@@ -145,7 +155,7 @@ This problem shows up when users copy-and-paste fancy/smart quotes from MS Word 
 The following steps can be used to resolve this encoding issue:
 
 * Install on your local machine [ftfy](https://ftfy.readthedocs.io/en/latest/), as it is a python tool it will require python3 installed as well;
-* Edit the command-line ftfy executable cli.py (it may be in a different path depending on your environment.): 
+* Edit the command-line ftfy executable cli.py (it may be in a different path depending on your environment.):
 	`/usr/local/lib/python3.6/site-packages/ftfy/cli.py`
 * Around line 100 (`$ vim +100 cli.py`) add an extra parameter 'uncurl_quotes=False' to the fix_file function. It will like as follows:
 
@@ -277,7 +287,7 @@ If you are running PHP 5.3+ \(which you should be doing\), you will need to run 
 
 If you are running PHP 7+, you will need to run OJS 3.0+.
 
-OJS and OMP 3.1.2+ **requires** PHP 7.1 or above. Refer to [docs/README](https://github.com/pkp/ojs/tree/master/docs) for your OJS/OMP version for more information about PHP system requirements.
+OJS and OMP 3.1.2+ **requires** PHP 7.1 or above. Refer to [docs/README](https://github.com/pkp/ojs/tree/main/docs) for your OJS/OMP version for more information about PHP system requirements.
 
 **NOTE**: If you are running OJS or OMP 3.x on a PHP7+ LAMP stack, please remember to update your MySQL driver parameter\(Database section\) on `config.inc.php` file, i.e.:
 

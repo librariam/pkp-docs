@@ -1,27 +1,45 @@
-# Introduction
+---
+title: About the ORCID Plugin Guide for OJS and OPS
+---
 
-[ORCID (Open Researcher and Contributor Identifier)](https://orcid.org/) is a persistent digital identifier that distinguishes individual researchers and supports automated links between researchers and their professional activities. For an overview of ORCID, please see the following introductory [ORCID video](https://vimeo.com/97150912).
+# About the ORCID Plugin
 
-## Platform Compatibility
+[ORCID](https://orcid.org/) (Open Researcher and Contributor Identifier) is a persistent digital identifier that distinguishes individual researchers and supports automated links between researchers and their professional activities. For an overview of ORCID, please see [this introductory ORCID video](https://vimeo.com/97150912).
 
-Both OJS and OPS share the same basic platform and therefore the instructions presented in this document apply for both journals using OJS and preprint servers using OPS. PKP partners with ORCID to enable the collection and display of authenticated ORCID iDs for contributors to journals published with OJS and preprints posted with OPS, using the ORCID Profile Plugin for OJS and OPS.
-
-The ORCID Profile Plugin is supported in OJS/OPS 3.1.2 and above. Previous versions of the Plugin vary in functionality. The ORCID plugin is not currently available in [Open Monograph Press (OMP)](https://pkp.sfu.ca/omp/). Users of OMP can manually enter their ORCID iD in their user profile under View Profile > Public, but metadata will not be automatically sent from OMP to ORCID, unlike OJS/OPS where metadata can be exchanged if the plugin is configured correctly.
-
-This document provides step-by-step instructions for Journal Managers and Administrators on how to use and configure the ORCID Profile Plugin in OJS/OPS and obtain ORCID membership and API credentials. It also explains how authors can register with ORCID and connect their ORCID iD with works published with OJS/OPS.
+PKP partners with ORCID to enable the collection and display of authenticated ORCID iDs for contributors to article and preprints published with Open Journal Systems (OJS) and Open Preprint Systems (OPS) via the ORCID Profile Plugin.
 
 ## What does the ORCID plugin do?
 
 The ORCID Profile Plugin for OJS/OPS versions 3.1.2 and above allows an OJS journal and an OPS preprint server to:
 
-* Collect and authenticate a contributor’s ORCID iD using the ORCID API ([ORCID member organizations](https://orcid.org/members) can use the ORCID Member API, non-member organizations can use the ORCID Public API - see descriptions of each API below).
-* Automatically send an email to contributors requesting their ORCID iD authentication.
-* Display a contributor’s authenticated ORCID iD on the journal article or preprint page, which will link to the contributor’s ORCID record. For example:
+* Collect and authenticate a contributor’s ORCID iD
+* Automatically send an email to contributors requesting their ORCID iD authentication
+* Display a contributor’s authenticated ORCID iD on the journal article or preprint page, which will link to the contributor’s ORCID record
+* Additionally for the Member API only - Automatically send publication details to a contributor’s ORCID record once their work has been published in OJS/OPS
 
-![Image of journal displaying authenticated iDs on the article page](./assets/orcid-id-example.png)
+For more details on each of these functions, see the [Using the ORCID plugin](./using-plugin.md) chapter.
 
-*Member API only*: Sends publication details to  the “works” section of a contributor’s ORCID record once their work has been published in OJS. This action is triggered when an issue is published, and updates the ORCID record automatically. *Please note:* that the information on the source of the publication does not currently work for OPS. For example:
+## Why should you use the ORCID plugin?
 
-![Image of ORCID displaying the source of an entry in an ORCID record](./assets/orcid-publication-source.png)
+By integrating ORCID with OJS/OPS, you will be able to support publishing best practices by:
 
-When a work is added to an ORCID record, the "source" is displayed as well. If a person adds a work to their own record, the "source" will be the person's name. If a work is added via API as in the case of OJS, the "source" will appear as whatever "client name" is entered when the ORCID API credentials are requested. If the ORCID plugin is being used for just a single journal, the source/client name is usually just the name of the journal. If the ORCID plugin is used for multiple journals on the same instance, then the source/client name would need to be something more broad, like "Univ. of XYZ Open Journals."
+* Allowing authors to collect their published work in one reliable place
+* Distinguishing authors from others with a similar name, and keeping an up-to-date record regardless of changes in name or affiliation
+* Demonstrating a commitment to transparency and credibility by accurately attributing authors to their published works
+* Supporting the collection of accurate article metadata, including author information, by sharing publication details with CrossRef
+
+## Public vs Member API
+
+ORCID provides two different API endpoints for the ORCID Public API and the ORCID Member API.
+
+The **Public API** is free and available to anyone. It allows for ORCID iD authentication and reading public data from ORCID records. It allows the journal to have contributors' ORCID iDs authenticated and displayed on article/preprint pages. Its main difference from the Member API is that it will not automatically send publication details to a contributor’s ORCID record upon publication. If you start with the Public API and then later decide to switch to the Member API, please contact ORCID support to coordinate the transition from Public to Member API.
+
+The **Member API** requires ORCID institutional membership. In addition to the functionalities of the Public API, the Member API allows for reading “trusted-parties” data from ORCID records, as well as automatically adding/updating metadata on ORCID records. 
+
+If your journal is affiliated with an institution, contact the institution's library to ask about ORCID membership and API credentials. You can also consult the ORCID member directory to see if your organization is already an [ORCID member](https://orcid.org/members), or review [ORCID’s membership information](https://orcid.org/about/membership) if your organization is interested in becoming an ORCID member. You can also contact ORCID directly at support@orcid.org.
+
+## Sandbox vs production credentials
+
+ORCID provides plugin users with an option to test how the plugin works with your installation in a Sandbox (testing) environment before going live with the Production environment. You will need a different set of credentials for the Sandbox vs Production API. 
+
+How to obtain Sandbox credentials, how to test in the Sandbox, and the advantages of testing in the Sandbox are explained further in the [Appendix: Testing the ORCID Sandbox](./appendix-testing-orcid-sandbox.md) chapter.

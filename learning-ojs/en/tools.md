@@ -1,21 +1,28 @@
 ---
 book: learning-ojs
-version: 3.3
+version: 3.4
+title: Learning Open Journal Systems 3.4 - Tools
+showPageTOC: true
+description: A guide to using the Tools menu in OJS, including Import/Export functions and QuickSubmit.
 ---
 
 # Tools
 
 The Tools section can be accessed from the left sidebar menu.
 
-![](./assets/learning-ojs3.2-jm-users-tools.png)
+![Tools side menu options](./assets/learning-ojs3.2-jm-users-tools.png)
 
 Tools consist of an Import/Export tab, a Report Generator tab (called Statistics in OJS 3.1.1 and earlier), and a Permissions tab.
+
+{% include video.html id="v3zjjVFYAyc" provider="youtube" title="Video of setting up a journal in OJS 3.3. Module 14: Tools"%}
+
+This PKP School video explains how to access and use Import/Export tools. To watch other videos in this series, visit [PKP’s YouTube channel](https://www.youtube.com/playlist?list=PLg358gdRUrDVTXpuGXiMgETgnIouWoWaY).
 
 ## Import/Export
 
 Import/Export allows you to easily get data out of your OJS journal and get data into it.
 
-![](./assets/learning-ojs3.2-jm-users-tools-import.png)
+![List of Import/Export plugins available](./assets/learning-ojs3.2-jm-users-tools-import.png)
 
 Some of the tools allow you to export to third-party systems, such as PubMed or the DOAJ. Others allow you to import or export article data.
 
@@ -26,6 +33,10 @@ For detailed instructions on importing and exporting see the [Administrator's Gu
 For more information on the Crossref XML Export Plugin, see the [PKP Crossref Guide](https://docs.pkp.sfu.ca/crossref-ojs-manual/en/).
 
 ### Quick Submit Plugin
+
+{% include video.html id="_nm1dGIZS8Y" provider="youtube" title="Video of setting up a journal in OJS 3.3. Module 18: Plugins- QuickSubmit"%}
+
+This PKP School video explains how to use the Quick Submit Plugin to add complete submissions to an issue. To watch other videos in this series, visit [PKP’s YouTube channel](https://www.youtube.com/playlist?list=PLg358gdRUrDVTXpuGXiMgETgnIouWoWaY).
 
 The Quick Submit Plugin allows you to quickly add complete submissions to an issue. It provides a one-step submission process for editors needing to bypass the traditional submission, review, and editing process.
 
@@ -43,7 +54,7 @@ To use this plugin, you will need the following:
 
 First, ensure that the Quick Submit Plugin has been installed and enabled for your journal.  You will need to have the Journal Manager role to enable the plugin and the Administrator role to install the plugin.
 
-![](./assets/find-plugins.png)
+![Settings side menu options with the option for Website selected.](./assets/find-plugins.png)
 
 1. Go to Settings > Website > Plugins
 2. Under Installed Plugins, look for the Quick Submit Plugin.  If you see it listed, skip to step 8.
@@ -54,7 +65,7 @@ First, ensure that the Quick Submit Plugin has been installed and enabled for yo
 7. After the plugin has been installed, go back to the Installed Plugins tab and find the Quick Submit Plugin.
 8. Check the box to the right of the plugin name and description to enable the plugin.
 
-![](./assets/enabled-import-plugins.png)
+![List of Import/Export plugins from the Installed Plugin tab in Website settings.](./assets/enabled-import-plugins.png)
 
 Next, you will need to create the issues (or issue) that will contain the new articles you are importing.
 
@@ -64,11 +75,11 @@ Next, you will need to create the issues (or issue) that will contain the new ar
 4. Click Save.
 5. Do this for all of the issues you are uploading articles for.
 
-![](./assets/create-issue.png)
+![Volume 1 Number 1, 2017 issue titled From below created under Future Issue.](./assets/create-issue.png)
 
 Next you can import each article with the Plugin.
 
-![](./assets/import-plugins.png)
+![Tools side menu options with Import/Export selected.](./assets/import-plugins.png)
 
 1. Go to Tools > Import/Export and select Quick Submit Plugin.
 2. Upload a cover image if you have one.  This field is optional and can be ignored.
@@ -79,7 +90,7 @@ Next you can import each article with the Plugin.
 7. At the end of the Quick Submit Plugin form, you can select whether you want the article you are adding to be published immediately or unpublished if you wish to publish it later. If you select **Published**, you will have to select the issue you would like to publish it in and enter the **Date Published**. You can also optionally enter page numbers and permissions information.
 8. When you have finished entering all data for the article, click Save.
 
-![](./assets/quick-submit-plugin-2.png)
+![Submission form on QuickSubmit.](./assets/quick-submit-plugin-2.png)
 
 DOIs are not added with the QuickSubmit Plugin. Instead, you have to add them separately.
 
@@ -99,30 +110,8 @@ To assign new DOIs to articles:
 3. Open Metadata on the top right and go to the Identifiers tab. You should see a preview of the DOI that will be assigned and a checked box next to "Assign the DOI to this article."
 4. Click Save and the DOI will be assigned.
 
-## Report Generator
-
-The Report Generator page provides access to a variety of reports from your journal.
-
-![](./assets/learning-ojs3.2-jm-users-tools-stats.png)
-
-The system generates reports that track the details associated with site usage and submissions over a given period of time. Reports are generated in CSV format which requires a spreadsheet application to view.
-
-- **PKP Usage Statistics Report**: Provides basic usage statistics for your journal.
-- **View Report**: Provides a report on galley and abstract views by readers (i.e., how many times a PDF for an article has been viewed).
-- **Articles Report**: Provides a spreadsheet of all published articles.
-- **COUNTER Reports**: Provides COUNTER data.
-- **Review Report**: Provides a spreadsheet of all review activity.
-
-### Generate Custom Report
-
-Use this feature to build your own reports.
-
-![](./assets/learning-ojs3.2-jm-users-tools-stats-custom.png)
-
-More information on how to generate and manage statistics in OJS is provided in the [Administrator's Guide](https://docs.pkp.sfu.ca/admin-guide/en/statistics).
-
 ## Permissions
 
 The Reset Article Permissions tool allows you to reset the copyright statement and license information on all published articles, and will revert it to your journal's current default settings. Take caution when using this tool and consult legal expertise if you are unsure what rights you hold over the articles published in your journal.
 
-![](./assets/learning-ojs3.2-jm-users-tools-permissions.png)
+![Option to reset artile permission in the Tools Permissions tab.](./assets/learning-ojs3.2-jm-users-tools-permissions.png)

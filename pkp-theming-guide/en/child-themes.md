@@ -63,7 +63,9 @@ Let's focus on the `init()` method.
 	}
 ```
 
-You can set a Parent Theme for this theme using the `setParent()` method. Let's make this theme a Child Theme of the Default Theme that ships with OJS 3.0+.
+You can set a Parent Theme for this theme using the `setParent()` method, which takes the plugin slug of the parent theme as an argument. The plugin slug is the parent theme's class, rendered in all lowercase. You can find the class in the parent theme's `version.xml` file.
+
+Let's make this theme a Child Theme of the Default Theme that ships with OJS 3.0+.
 
 ```php
 	/**
@@ -136,4 +138,4 @@ You don't need to register extended relationships of this kind. When a Parent Th
 This won't be needed very often, but it can be useful if you manage lots of journal themes and want to share code between theme. Or if you are extending one of the community-provided child themes.
 
 ## Example
-If you prefer to study code, a [simple example Child Theme](https://github.com/NateWr/defaultChild) can be found with all the basic configuration in place.
+If you prefer to study code, a [simple example Child Theme](https://github.com/pkp/defaultChild) can be found with all the basic configuration in place.

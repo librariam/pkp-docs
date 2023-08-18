@@ -24,7 +24,7 @@ There are many ways to [configure your environment](https://docs.cypress.io/guid
 
 Replace `****` with the values which match your local installation and place this file in your application's root directory.
 
-> The `DBTYPE` must match one of the options in the installation form. It is usually `mysqli` or `postgres`.
+> The `DBTYPE` must match one of the options in the installation form. It is usually `mysqli` or `postgres9`.
 {:.tip}
 
 The integration tests will install the software and create test data.
@@ -59,7 +59,12 @@ Or open Cypress and watch the tests while they run.
 npx cypress open
 ```
 
-![Once Cypress opens, click the Run All Specs button to start the tests.](./cypress-open.gif)
+<figure class="video_container">
+  <video controls="true" allowfullscreen="true">
+    <source src="./cypress-open.mp4" type="video/mp4">
+  </video>
+  <figcaption>Once Cypress opens, click the Run All Specs button to start the tests.</figcaption>
+</figure>
 
 Tests that are shared between the applications are stored in the `lib/pkp/cypress/integration` directory and must be run with a separate command.
 

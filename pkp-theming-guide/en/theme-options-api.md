@@ -4,7 +4,7 @@ Theme options allow you to offer theme-specific configuration settings. They are
 
 Options added to a theme will appear under the theme selection in the Settings > Website > Appearance > Theme  section.
 
-![Screenshot of theme options in backend](theme-options.png)
+![Theme options in the OJS backend](theme-options.png)
 
 ## Add a theme option
 
@@ -154,7 +154,7 @@ Get the option's `Field` object to manipulate it directly.
 ```php
 public function init() {
 	$typographyField = $this->getOptionConfig('typography');
-	$typographField->label = __('plugins.themes.default.option.typography.label');
+	$typographyField->label = __('plugins.themes.default.option.typography.label');
 }
 ```
 

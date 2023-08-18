@@ -4,6 +4,10 @@ The repository for generating PKP's documentation hub.
 
 Interested in contributing documentation? Check out [our guidelines for contributing to PKP documentation](https://docs.pkp.sfu.ca/contributing/) to get started.
 
+## Community Code of Conduct
+
+This repository is one of PKP's community spaces and all activities here are guided by [PKP's Code of Conduct](https://pkp.sfu.ca/code-of-conduct/). Please review the Code and help us create a welcoming environment for all participants.
+
 ## Usage
 
 [Install Ruby 2.1.0 or higher](https://www.ruby-lang.org/en/documentation/installation/) and install the bundler gem.
@@ -12,7 +16,7 @@ Interested in contributing documentation? Check out [our guidelines for contribu
 gem install bundler
 ```
 
-Install Jekyll to build or serve the site.
+Access the `pkp-docs` root folder and install Jekyll to build or serve the site.
 
 ```
 bundle install
@@ -123,6 +127,18 @@ The base URL, `/<any-book>/en`, should always be the current version so that any
 
 This structure doesn't yet support versioning separate language editions of documents. We can work on that when we need it.
 
+## Block search indexing
+
+To block indexing in search engines, add the following to the frontmatter in each `.md` file in a document:
+
+```
+---
+noindex: true
+---
+```
+
+This will add `<meta name="robots" content="noindex">` to each page.
+
 ## Generate REST API References
 
 The REST API references use [redoc](https://github.com/Redocly/redoc) to generate the human-readable documentation from an OpenAPI json file. To build the REST API references you will need a checkout of the application for the version you wish to generate a reference.
@@ -146,3 +162,15 @@ redoc-cli bundle ~/3.3.json --options=.redoc.json --output=dev/api/ojs/3.3.html
 ```
 
 Then add a link to the new file in the [API Guide](./dev/api/index.md) and the [card](./_includes/cards/dev/rest-api.md).
+
+## Generate Database References
+
+The database references are generated with [SchemaSpy](https://schemaspy.org/). To generate a reference, follow the [installation instructions](https://schemaspy.readthedocs.io/en/latest/installation.html) and then run SchemaSpy with the [configuration](https://schemaspy.readthedocs.io/en/latest/started.html) parameters to point to the database you want to profile.
+
+Once the documentation is generated, move the whole directory into the docs hub. For example, if the documentation is for OJS 3.5, run the following command to move it to the correct directory in the docs hub:
+
+```
+mv <schema-spy-output-dir> <docs-hub>/dev/database/ojs/3.5
+```
+
+Add a link to the documentation from `/dev/database/index.md`.

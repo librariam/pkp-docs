@@ -1,8 +1,13 @@
+---
+title: Creating accessible galley files- Creating Accessible Content Guide
+showPageTOC: true
+---
+
 # Creating accessible galley files
 
 This section provides an overview of how to incorporate the accessible content principles listed above into specific galley formats your journal may be using.
 
-## How to check an MS Word document for accessibility
+## How to check an MS Word document for accessibility {#word-docs}
 
 The MS Word Accessibility Checker scans the file for common issues that may make a file less accessible for users with disabilities.
 
@@ -21,13 +26,13 @@ Clicking an item in the "Inspection Results" list will take you directly to the 
 
 For further support, see the MS Support resource [Improve Accessibility with the Accessibility Checker](https://support.office.com/en-us/article/improve-accessibility-with-the-accessibility-checker-a16f6de0-2f39-4a2b-8bd8-5ad801426c7f#PickTab=Windows).
 
-## Labeling your galley files
+## Labeling your galley files {#labeling}
 
 Galleys should be labeled according to the type of file being published, such as PDF or HTML (see below for information on choosing which galley formats to use). Your galley files should also follow a common naming pattern and be consistent across all publications, so that all galleys of the same type (e.g. PDF) have the same label. Screen readers will read out the type followed by the title, like “PDF: Open badges as credentials in Open Education systems: Case studies from Greece and Europe”.
 
 Supplementary galleys should have a label that describes the content. For example, “Supplemental Data” is not very descriptive. “Regional Income Data” or “Interview Transcripts” are more descriptive.
 
-## Which galley formats to use?
+## Which galley formats to use? {#formats}
 
 Online journals publish their articles in a variety of file types. The most common are PDF and HTML, but increasingly these additional formats are being used: ePub, MP3, and XML. As a general rule, more structured formats (those with tagging in place to indicate the features, such as headings, alt text, etc) are the most accessible. With all formats there are things you can do to maximize the accessibility and preserve the structure of the original document.
 
@@ -47,11 +52,11 @@ The method you choose to export your Word Document to PDF will affect the preser
 
 Export your Word Document by using “Create PDF” from a file in Adobe Acrobat Pro. Open Adobe Acrobat Pro > File > Create > PDF from File > Select desired document to convert.
 
-![Screenshot of Acrobat Pro DC menu option to create PDF from file.](./assets/9_a11y-guide-create-pdf-pro1.png)
+![The Acrobat Pro DC menu option to create PDF from file.](./assets/9_a11y-guide-create-pdf-pro1.png)
 
 If you are creating a document via the Acrobat Tab in MS Office, make sure that **Enable Accessibility and Reflow with tagged Adobe PDF** is checked.
 
-![Screenshot of Acrobat PDFMaker with the checked checkbox to Enable Accessibility and Reflow with tagged Adobe PDF](./assets/10_a11y-guide-create-pdf-pro2.png)
+![The Acrobat PDFMaker with the checked checkbox to Enable Accessibility and Reflow with tagged Adobe PDF](./assets/10_a11y-guide-create-pdf-pro2.png)
 
 ##### Next Best Method (does not require Adobe Acrobat Pro)
 
@@ -61,13 +66,13 @@ On Windows:
 Select **File > Save As**. Select “PDF” from the list of drop-down files.
 Click “Options” and make sure **“Document structure tags for accessibility”** is checked, then save the file.
 
-![Screenshot of MS Word on Windows file save option with the checked checkbox Document structure tags for accessibility](./assets/11_a11y-guide-saveas-pdf1.png)
+![The MS Word on Windows file save option with the checked checkbox Document structure tags for accessibility](./assets/11_a11y-guide-saveas-pdf1.png)
 
 On Mac:
 Open the **File** application menu and select **Save As…**
 Under **File Format**, select “PDF”. Then choose the **Best for electronic distribution and accessibility** (**uses Microsoft online service**) radio button, then **Export**.
 
-![Screenshot of the MS Word on Mac file save option in PDF with the checked checkbox Best for electronic distribution and accessibility](./assets/12_a11y-guide-saveas-pdf2.png)
+![The MS Word on Mac file save option in PDF with the checked checkbox Best for electronic distribution and accessibility](./assets/12_a11y-guide-saveas-pdf2.png)
 
 **IMPORTANT**: **never “Print to PDF”** when exporting a Word Document to PDF. A screen reader user may still be able to access the text of a PDF created in this way, but heading structure, alternative text, and any other tag structure will be lost.
 
@@ -89,7 +94,7 @@ Remediating a document in PDF requires Adobe Acrobat Pro. For more details see t
 
 HTML is another popular galley format used by publishers. It offers more flexibility than PDF for adjusting to different screen sizes and accommodating multimedia. It has the potential to be more accessible than PDF as long as the document follows the [general principles of creating accessible content](./principles.md#headings-structure), such as structured headings, alt text, etc.
 
-For instructions on how to create and style HTML galleys, add multimedia content, and upload HTML galleys to OJS, see the [Learning OJS 3 - Chapter 15: Production and Publication - HTML Files](/learning-ojs/en/production-publication#html-files).
+For instructions on how to create and style HTML galleys, add multimedia content, and upload HTML galleys to OJS, see [Learning OJS 3: Production and Publication - HTML Files](/learning-ojs/en/production-publication#html-files).
 
 ### XML
 

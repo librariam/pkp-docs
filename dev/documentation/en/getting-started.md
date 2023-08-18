@@ -1,28 +1,28 @@
 ---
+book: dev-documentation
+version: 3.4
 title: Getting Started - Technical Documentation - OJS|OMP|OPS
 ---
 
 # Getting Started
 
-This section will describe how to install the application, contribute changes, and stay up-to-date with the latest changes.
-
 > This guide assumes that you know how to run a local server, work with git version control and run tools from the command line.
 {:.warning}
 
-## Technical Requirements
+This section will describe how to install the application in a local development environment and stay up-to-date with the latest changes. It is intended for developers who want to work with the source code. Read the [Admin Guide](../../../admin-guide/) to learn how to install and host the application in a production environment.
 
-The following requirements must be met to run the software from the GitHub repositories. Read the [Admin Guide](../../../admin-guide/en/managing-the-environment) if you are installing from a release package.
+## System Requirements
 
-- PHP 7.3+
-- MySQL 4.1+ _or_ PostgreSQL 9.1.5+
+> If you are using Windows, you may need to install GNU Patch and add it to your system's `PATH` environment variable.
+{:.notice}
 
-If you are using Windows, you may need to install GNU Patch and add it to your system's `PATH` environment variable.
+The Admin Guide describes the [system requirements](../../../admin-guide/en/requirements). When running locally, many of the recommended dependencies are not required.
 
 ## Install
 
-Fork and clone the [OJS](https://github.com/pkp/ojs), [OMP](https://github.com/pkp/omp), or [OPS](https://github.com/pkp/ops) repository on GitHub. (How to [fork and clone a repository on GitHub](https://help.github.com/en/articles/fork-a-repo).)
+Fork and clone the [OJS](https://github.com/pkp/ojs), [OMP](https://github.com/pkp/omp), or [OPS](https://github.com/pkp/ops) repository on GitHub. If you're not sure how, read how to [fork and clone a repository](https://help.github.com/en/articles/fork-a-repo) on GitHub.
 
-From your terminal, navigate to the application's root directory and run the following command to check out the submodules:
+Once the application is cloned to your local system, navigate to the application's root directory in your terminal and run the following command to check out the submodules.
 
 ```
 git submodule update --init --recursive
@@ -36,20 +36,40 @@ cp config.TEMPLATE.inc.php config.inc.php
 
 Open the `config.inc.php` file, find the database settings, and update them to match the credentials for your SQL server.
 
+```
+[database]
+
+driver = <driver>   # mysql or postgres9
+host = <host>       # usually `localhost`
+username = <user>
+password = <pass>
+name = <db>
+```
+
+Find the `[email]` settings in the config file and route emails to the server `log` or a [local SMTP server](./resources#log-emails).
+
+```
+[email]
+
+; Default method to send emails
+; Available options: sendmail, smtp, log
+default = log
+```
+
 Install dependencies with [composer](https://getcomposer.org/).
 
 ```
-composer --working-dir=lib/pkp update
-composer --working-dir=plugins/paymethod/paypal update
+composer --working-dir=lib/pkp install
+composer --working-dir=plugins/generic/citationStyleLanguage install
 ```
 
-Run the following command if you are installing OJS.
+Run the following command if you are installing OJS or OMP.
 
 ```
-composer --working-dir=plugins/generic/citationStyleLanguage update
+composer --working-dir=plugins/paymethod/paypal install
 ```
 
-Install dependencies with [NPM](https://www.npmjs.com/).
+Install dependencies and build the JavaScript package with [NPM](https://www.npmjs.com/).
 
 ```
 npm install
@@ -66,10 +86,10 @@ Load your browser and navigate to `http://localhost:8000` to install the applica
 
 ## Branches
 
-Published versions of the software can be found in branches in the git repository. For example, run the following command to check out version 3.1.2 of the software.
+Published versions of the software can be found in branches in the git repository. For example, run the following command to check out the latest 3.3.0-x version of the software.
 
 ```
-git checkout stable-3_1_2
+git checkout stable-3_3_0
 ```
 
 ## Remotes
@@ -98,24 +118,35 @@ git remote add upstream git@github.com:pkp/ui-library.git
 cd ../..
 ```
 
+For OPS:
+
+```
+git remote add upstream git@github.com:pkp/ops.git
+cd lib/pkp
+git remote add upstream git@github.com:pkp/pkp-lib.git
+cd ../ui-library
+git remote add upstream git@github.com:pkp/ui-library.git
+cd ../..
+```
+
 Run the following commands whenever you want to pull the latest changes to your repository.
 
 ```
 # Update the app
-git checkout master
-git pull upstream master
+git checkout main
+git pull upstream main
 git push
 
 # Update the pkp-lib submodule
 cd lib/pkp
-git checkout master
-git pull upstream master
+git checkout main
+git pull upstream main
 git push
 
 # Update the ui-library submodule
 cd ../ui-library
-git checkout master
-git pull upstream master
+git checkout main
+git pull upstream main
 git push
 
 cd ../..
@@ -145,7 +176,7 @@ php tools/upgrade.php upgrade
 
 ## Contributions
 
-All contributions should be written in a branch and pushed to your fork. Then open a [Pull Request](https://help.github.com/en/articles/creating-a-pull-request-from-a-fork) to PKP's repository.
+Read the [Contributor's Guide](https://docs.pkp.sfu.ca/dev/contributors) to learn more about [how to prepare a pull request](https://docs.pkp.sfu.ca/dev/contributors/#code-contributions).
 
 ---
 

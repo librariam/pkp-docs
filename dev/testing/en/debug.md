@@ -18,11 +18,21 @@ When the tests are run from the terminal you will find a screenshot of the brows
 
 The [CI tests](./continuous-integration) can be difficult to debug. Travis provides access to its build logs and screenshots of test failures to help.
 
-![Short video showing how to access log of build results](./travis-log.gif)
+<figure class="video_container">
+  <video controls="true" allowfullscreen="true">
+    <source src="./travis-log.mp4" type="video/mp4">
+  </video>
+  <figcaption>Short video showing how to access log of build results.</figcaption>
+</figure>
 
 This provides a log of the entire build process including the logs from the Cypress and PHP Unit tests. Parts of the log, such as the server's error log, are truncated and can only be reached by accessing the raw log.
 
-![Short video showing how to access the raw log of build results](./travis-log-raw.gif)
+<figure class="video_container">
+  <video controls="true" allowfullscreen="true">
+    <source src="./travis-log-raw.mp4" type="video/mp4">
+  </video>
+  <figcaption>Short video showing how to access the raw log of build results.</figcaption>
+</figure>
 
 > When viewing the raw log, run a search in your browser for "fatal". This is a quick way to find the source of many -- _but not all_ -- test failures.
 {:.tip}
@@ -33,19 +43,11 @@ Travis provides a [debug mode](https://docs.travis-ci.com/user/running-build-in-
 
 ### Screenshots
 
-Screenshots can be accessed by using the uuencode tool on the Travis VM. Add the following to `.travis.yml`.
+Screenshots can be accessed by using the uuencode tool on the Travis VM. To extract the screenshots related to a test failure, follow these steps.
 
-```yaml
-after_failure:
-  - sudo apt-get install sharutils
-  - tar cz cypress/screenshots | uuencode /dev/stdout
-```
-
-When the tests run with these settings, the log will contain a uuencoded dump of screenshots of the failure. To extract the screenshots, save the raw log to your local machine and run the following.
-
-```
-uudecode /path/to/log.txt | tar xvz
-```
+- When viewing the test output on Travis, click the "Raw Log" button.
+- Save the log to your computer, for example `/tmp/log.txt`.
+- Run `cat /tmp/log.txt | uudecode | tar xvz` to extract the screenshots locally.
 
 > If you are struggling to understand a test failure in Travis, it may be best to run the tests locally where you have more insight into the state of the application.
 {:.tip}
