@@ -39,17 +39,11 @@ If your plugin is not available for the Plugin Gallery but you would like to hav
 
 Attempts to reduce the dependance of the application on periodic scheduling tools such as 'cron.' Once enabled, this plugin should result in the processing of log files (along with other scheduled tasks, such as review and subscription reminders).
 
-### AddThis
-
-Provides the addThis social media sharing on the articles abstract/landing page.
-
-* [AddThis plugin guide](/learning-ojs/en/settings-website#addthis-plugin)
-
 ### Allowed Uploads
 
 Enables journals to choose the filetypes that are allowed when submitting a manuscript.
 
-* [Allowed plugin in GitHub](https://github.com/ajnyga/allowedUploads)
+* [Allowed Uploads plugin in GitHub](https://github.com/ajnyga/allowedUploads)
 
 ### Announcement Block
 
@@ -71,7 +65,7 @@ Enables the assignation and management of ARK ID to issue, article and galley.
 
 Generates a CSV spreadsheet containing a list of articles (published and unpublished), including the submission ID, title, abstract, author information, current status, and more.
 
-* [Article Report guide](/learning-ojs/en/statistics#usage-statistics-report)
+* [Article Report guide](/admin-guide/en/statistics.html#submissions)
 
 ### Akismet
 
@@ -118,7 +112,7 @@ Embeds EPUb files on the article galley view for OJS and OMP using Bibi Epub Rea
 
 ### Bootstrap3 Theme
 
-Applies a starter Bootstrap 3 theme. Knowledge of HTML, CSS and JavaScript will be needed for this theme as it is designed to be a base and not a final product.
+An official theme that applies a starter Bootstrap 3 theme. Knowledge of HTML, CSS and JavaScript will be needed for this theme as it is designed to be a base and not a final product.
 
 * [Bootstrap3 Theme guide](/pkp-theming-guide/en/theme-bootstrap3)
 * [Bootstrap3 Theme in GitHub](https://github.com/pkp/bootstrap3)
@@ -171,7 +165,7 @@ Allows journal and press managers to limit who can upload public files and what 
 
 Generates a CSV spreadsheet of journal activity, using the COUNTER standard. These reports alone do not make a journal COUNTER compliant. To offer COUNTER compliance, review the requirements at the Project COUNTER website. As this report includes data from all journals hosted in this OJS instance, it is only available to Site Administrators.
 
-* [COUNTER reports guide](/learning-ojs/en/statistics#usage-statistics-report)
+* [COUNTER reports guide](/admin-guide/en/statistics.html#counter)
 
 ### Crossref Reference Linking Plugin
 
@@ -211,7 +205,7 @@ Allows customization of message keys (field names, labels, links, etc.) in local
 
 Export or register issue, article, galley and supplementary file metadata in DataCite format.
 
-* [Datacite export plugin guide](/admin-guide/en/data-import-and-export#datacite-exportregistration-plugin)
+* [Datacite export plugin guide](/admin-guide/3.3/en/data-import-and-export#datacite-exportregistration-plugin)
 * [Datacite export plugin in GitHub](https://github.com/pkp/ojs/tree/main/plugins/generic/datacite)
 
 ### Datacite export for OMP
@@ -240,17 +234,18 @@ Make OJS fall back on English when elements of the software translation are miss
 
 Adds a link to [Open Journal Systems](https://pkp.sfu.ca/ojs/) in the sidebar.
 
-### Disqus
+### Disqus (unvetted)
 
 Integrates with Disqus and allows users to add comments to the abstract pages.
 
-* [Disqus plugin guide](/learning-ojs/en/settings-website#custom-header-plugin)
+* [Disqus plugin guide](/learning-ojs/en/settings-website#disqus)
+* [Disqus plugin in GitHub](https://github.com/ajnyga/disqus)
 
 ### DOAJ Export Plugin
 
 Allows journals to manually or automatically deliver articles to the Directory of Open Access Journals (DOAJ) with a DOAJ API Key. Requires a journal to be DOAJ member - see [DOAJ application guide](/doaj/) for application instructions.
 
-* [DOAJ Export plugin guide](/admin-guide/en/data-import-and-export#doaj-export-plugin)
+* [DOAJ Export plugin guide](/admin-guide/3.3/en/data-import-and-export#doaj-export-plugin)
 
 ### DOI
 
@@ -258,11 +253,17 @@ Enables the assignment of the Digital Object Identifiers to issues, articles and
 
 * [DOI plugin guide](/doi-plugin/en/)
 
+### DOI in Summary
+
+Shows the DOI of the articles in the summary of issues and in the home page.
+
+* [DOI in Summary plugin in GitHub](https://github.com/lepidus/doiInSummary)
+
 ### DOI to mEDRA xml export and registration
 
 Enables the export of issue, article and galley metadata in ONIX4DOI format and the registration of DOIs with mEDRA.
 
-* [mEDRA plugin guide](/admin-guide/en/data-import-and-export#medra-exportregistration-plugin)
+* [mEDRA plugin guide](/admin-guide/3.3/en/data-import-and-export#medra-exportregistration-plugin)
 * [mEDRA plugin in GitHub](https://github.com/pkp/medra/)
 
 ### DRIVER
@@ -305,7 +306,13 @@ Integrates OJS with Google Analytics, Google's web site traffic analysis applica
 
 Enables indexing of published content in Google Scholar.
 
-* [Google Scholar plugin guide](/google-scholar/en/)
+* [Google Scholar indexing guide](/google-scholar/en/)
+
+### Gopher Theme
+
+A UMN developed modern, simple theme with a focus on accessibility.
+
+* [Gopher Theme plugin in GitHub](https://github.com/UMNLibraries/ojs-gopher-theme)
 
 ### Health Sciences Theme
 
@@ -399,7 +406,7 @@ Allows the manager to manually record receipt of a user's payment (outside of th
 
 ### Manuscript (Default child theme)
 
-Applies a clean, simple theme with a boxed layout that mimics a paper document.
+An official OJS 3 theme that applies a clean, simple look with a boxed layout that mimics a paper document.
 
 * [Manuscript theme plugin guide](/pkp-theming-guide/en/theme-manuscript)
 * [Manuscript theme plugin in GitHub](https://github.com/pkp/defaultManuscript)
@@ -492,7 +499,7 @@ Provides browser-based viewer for article and issue galleys in PDF.
 
 Generates a CSV spreadsheet containing monthly views for the journal homepage; issue TOCs; article abstract/landing pages; and file downloads. It can provides country information (if configured).
 
-* [Usage Statistics Report plugin guide](/learning-ojs/en/statistics#usage-statistics-report)
+* [Usage Statistics Report plugin guide](/learning-ojs/3.3/en/statistics#usage-statistics-report)
 
 ### PKP PN
 
@@ -547,7 +554,7 @@ Enables integration with Publons Reviewer Recognition Service. This plugin will 
 
 Export article metadata in PubMed XML format for journals indexed in MEDLINE.
 
-* [PubMed XML Export plugin guide](/admin-guide/en/data-import-and-export#pubmed-xml-export-plugin)
+* [PubMed XML Export plugin guide](/admin-guide/3.3/en/data-import-and-export#pubmed-xml-export-plugin)
 
 ### PURL
 
@@ -580,7 +587,7 @@ Sends an email notification to a configurable list of emails, configurable per j
 
 * [Registration Notification plugin in GitHub](https://github.com/pkp/registrationNotification)
 
-### Research Organization Registry(ROR)
+### Research Organization Registry (ROR)
 
 Integrates support for [ROR](https://ror.org/). Organizations maintained by ROR.org are automatically fetched using an auto suggesting function. For multilingual journals, additionally supported languages will be pre-filled given, ROR.org has the corresponding names in the OJS supported languages.
 
@@ -602,7 +609,7 @@ Enables integration with ReviewerCredits. ReviewerCredits Journal credentials wi
 
 Generates a CSV report containing a list of review assignments for a journal, including reviewer names, reviews, and recommendations.
 
-* [Review Report guide](/learning-ojs/en/statistics#usage-statistics-report)
+* [Review Report guide](/admin-guide/en/statistics.html#reviews)
 
 ### RFC1807 Metadata Format
 
@@ -631,7 +638,7 @@ Adds social media buttons to your web site (to the footer of each page or the si
 
 Adds an ability to use shibboleth single sign-on service to register and authenticate users. You must have set up and configured the local service provider (SP).
 
-* [Shibboleth plugin guide](/admin-guide/en/single-signon#setting-up-shibboleth)
+* [Shibboleth plugin guide](//en/single-signon#setting-up-shibboleth)
 * [Shibboleth plugin in GitHub](https://github.com/pkp/shibboleth)
 
 ### Sitesearch
@@ -656,7 +663,7 @@ Permits delegation of OJS subscription checks to a third-party web service.
 
 Generates a CSV spreadsheet containing a list of subscriptions and their information. This report provides subscription status, type, format, dates, and subscriber information.
 
-* [Subscription Report plugin guide](/learning-ojs/en/statistics#usage-statistics-report)
+* [Subscription Report plugin guide](/admin-guide/en/statistics.html#subscriptions)
 
 ### Suggested Reviewers Plugin by Ubiquity Press (unvetted)
 
@@ -712,7 +719,7 @@ Allows to make the "affiliation" and "ORCID" fields required for contributors on
 
 ### Twitter Block
 
-Integrates Twitter feeds in a multi-journal instance without the need to create several custom blocks. This plugin requires Administrator access to configure and enable/disable.
+Integrates Twitter feeds in a multi-journal instance without the need to create several custom blocks. This plugin requires Administrator access to configure and enable/disable. Note: Twitter Block became non-functional mid-2023 due to the changes in Twitter's embed policies.
 
 ### URN
 
@@ -732,13 +739,13 @@ Displays the number of article downloads on the article page, in bar or line gra
 
 Allows import and export of users and their roles between the same OJS versions.
 
-* [Users XML plugin guide](/admin-guide/en/data-import-and-export#export-users-to-xml)
+* [Users XML plugin guide](/admin-guide/3.3/en/data-import-and-export#export-users-to-xml)
 
 ### View Report
 
 Generates a CSV spreadsheet describing readership for each article, including article title, issue, date published, and view counts (for abstracts, individual galleys, total galleys).
 
-* [View Report in guide](/learning-ojs/en/statistics#view-report)
+* [View Report in guide](/learning-ojs/3.3/en/statistics#view-report)
 
 ### Web Feed Plugin
 
